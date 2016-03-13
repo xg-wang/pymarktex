@@ -53,7 +53,7 @@ into latex format:
     \end{figure}
     ```
 
-- `\lstinline{inline code}
+- `\lstinline{inline code}`
 - `\begin{lstlisting}[language=Python]...\end{lstlisting}`
 - `\begin{quotation} ... \end{quotation}`
 - hrule treated as `\newpage`

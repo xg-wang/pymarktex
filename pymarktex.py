@@ -277,6 +277,10 @@ class InlineLexer(object):
         text = m.group(2) or m.group(1)
         return self.renderer.italic(text)
 
+    def output_inline_code(self, m):
+        code = m.group(2)
+        return self.renderer.inlinecode(code)
+
     def output_link(self, m):
         text = m.group(1)
         link = m.group(3)
@@ -337,6 +341,10 @@ class Renderer(object):
     def italic(self, text):
         """Render the italic text"""
         return '\\textit{%s}' % text
+
+    def inlinecode(self, code):
+        """Render the inline code"""
+        return '\\lstinline{%s}' % code
 
     def text(self, text):
         """return the pure text"""
@@ -469,7 +477,7 @@ class Markdown(object):
                 body += self.output_from_token()
         return self.renderer.list_item(body)
 
-    def output_loose_item(self):
+    def output_loose_item_start(self):
         body = self.renderer.placeholder()
         while self.pop_tokens()['type'] != 'list_item_end':
             body += self.output_from_token()

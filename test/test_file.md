@@ -15,7 +15,7 @@ Other text.
 print 'some code'
 ~~~
 
-`inline code'
+`inline code`
 
 - list starts
 - *italic*
