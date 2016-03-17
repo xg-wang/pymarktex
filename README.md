@@ -12,7 +12,7 @@ This module is inspired by [mistune](http://mistune.readthedocs.org/).
 ## Usage
 Usage:
 
-    ./pymarktex.py textfile.md
+    ./pymarktex.py testfile.md > testfile.tex
 
 or:
 
