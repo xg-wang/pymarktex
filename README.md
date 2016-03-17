@@ -59,7 +59,7 @@ into latex format:
 - hrule treated as `\newpage`
 
 ## TODO list
-- fix escape charactors
+- fix escape charactors: & _
 - fix `<link>` bug
 - prettify the nested lists output
 - test suite
