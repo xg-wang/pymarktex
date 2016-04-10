@@ -432,7 +432,7 @@ class Markdown(object):
     def get_all_text(self):
         # when token is text get all following texts
         text = self.token['text']
-        while self.peek()['type'] == 'text':
+        while self.peek() and self.peek()['type'] == 'text':
             text += '\n' + self.pop_tokens()['text']
         return self.inline(text)
 
